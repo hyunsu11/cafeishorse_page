@@ -23,6 +23,8 @@ def randomQuiz(request, id):
 
 @api_view(['GET'])
 def byeAPI(request):
-    test = np.array(["test",3])
-    result = test.to_dict(orient = 'record')
+    test = np.array(["test"])
+    test1 = pd.DataFrame(test)
+    result = test1.to_dict(orient = 'record')
+    print(result)
     return Response(result)
