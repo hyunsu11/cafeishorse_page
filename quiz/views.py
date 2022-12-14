@@ -20,4 +20,4 @@ def randomQuiz(request, id):
 
 @api_view(['GET'])
 def byeAPI(request):
-    return Response("베포 실험")
+    return Response("베포 실험2")
