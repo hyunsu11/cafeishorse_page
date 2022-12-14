@@ -3,6 +3,7 @@ from rest_framework.decorators import api_view
 from .models import Quiz
 from .serializers import QuizSerializer
 import random
+import pandas as pd
 # Create your views here.
 
 @api_view(['GET'])
