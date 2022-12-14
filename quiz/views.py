@@ -4,6 +4,8 @@ from .models import Quiz
 from .serializers import QuizSerializer
 import random
 import pandas as pd
+import numpy as np
+
 # Create your views here.
 
 @api_view(['GET'])
@@ -21,4 +23,6 @@ def randomQuiz(request, id):
 
 @api_view(['GET'])
 def byeAPI(request):
-    return Response("베포 실험2")
+    test = np.array(["test",3])
+    result = test.to_dict(orient = 'record')
+    return Response(result)
