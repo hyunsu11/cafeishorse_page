@@ -28,3 +28,10 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
+
+    - uses: akhileshns/heroku-deploy@v3.1.6 # This is the action
+      with:
+        heroku_api_key: < heroku api key >
+        heroku_app_name: < heroku app name > #Must be unique in Heroku
+        heroku_email: < heroku account >
+        healthcheck: < heroku health check path >
